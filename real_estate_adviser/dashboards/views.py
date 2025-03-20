@@ -38,7 +38,8 @@ def register(request):
 def search_results(request):
     query = request.GET.get('search_str')
     results = []
-    query = ""
+    if query:
+        results = []
     return render(request, 'search_results.html', {'query': query, 'results': results})
 
 @login_required(login_url='/login/')

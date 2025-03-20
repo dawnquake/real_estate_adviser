@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home | My Website{% endblock %}
+
+{% block content %}
+
+{% if query %}
+<p>Showing results for: "{{ query }}"</p>
+{% endif %}
+
+
+
+
+{% endblock %}
