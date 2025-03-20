@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home | My Website{% endblock %}
+
+{% block content %}
+
+<h2 class="mt-5">Useful Links</h2>
+<ul class="list-group mt-3">
+    <li class="list-group-item">
+        <a class="nav-link" href="{% url 'inspect_cart' %}">Inspect Cart</a>
+        <a class="nav-link" href="{% url 'inspect_orders' %}">Inspect Orders</a>
+    </li>
+</ul>
+
+{% endblock %}
