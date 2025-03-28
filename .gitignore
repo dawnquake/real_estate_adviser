@@ -173,6 +173,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-real_estate_adviser/real_estate_adviser/preprocessing/*
-real_estate_adviser/preprocessing
+real_estate_adviser/preprocessing/*
 real_estate_adviser/dashboards/fixtures/Postcodes.json
