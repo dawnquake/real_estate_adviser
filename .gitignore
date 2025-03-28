@@ -58,7 +58,7 @@ cover/
 # Django stuff:
 *.log
 local_settings.py
-# db.sqlite3
+db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
@@ -174,4 +174,3 @@ cython_debug/
 .pypirc
 
 real_estate_adviser/preprocessing/*
-real_estate_adviser/dashboards/fixtures/Postcodes.json

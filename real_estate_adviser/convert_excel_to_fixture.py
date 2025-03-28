@@ -25,4 +25,4 @@ def create_postcodes_fixture(excel_file: str):
         json.dump(fixture, f, indent=4)
 
 
-create_postcodes_fixture(os.path.join("preprocessing", "london_postcodes_cleaned.csv"))
+create_postcodes_fixture('preprocessing/cleaned_postcodes.csv')
