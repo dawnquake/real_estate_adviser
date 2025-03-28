@@ -1,6 +1,0 @@
-django
-plotly
-pandas
-numpy
-scipy
-openpyxl

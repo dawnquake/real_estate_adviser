@@ -172,5 +172,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-
-real_estate_adviser/preprocessing/*
