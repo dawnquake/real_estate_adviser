@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Home | My Website{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"> {{postcode.postcode}} </h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>Field Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Postcode</td>
+                <td>{{ postcode.postcode }}</td>
+            </tr>
+            <tr>
+                <td>Latitude</td>
+                <td>{{ postcode.latitude }}</td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td>{{ postcode.longitude }}</td>
+            </tr>
+            <tr>
+                <td>Easting</td>
+                <td>{{ postcode.easting }}</td>
+            </tr>
+            <tr>
+                <td>Northing</td>
+                <td>{{ postcode.northing }}</td>
+            </tr>
+            <tr>
+                <td>County</td>
+                <td>{{ postcode.county }}</td>
+            </tr>
+            <tr>
+                <td>District</td>
+                <td>{{ postcode.district }}</td>
+            </tr>
+            <tr>
+                <td>Ward</td>
+                <td>{{ postcode.ward }}</td>
+            </tr>
+            <tr>
+                <td>District Code</td>
+                <td>{{ postcode.district_code }}</td>
+            </tr>
+            <tr>
+                <td>Ward Code</td>
+                <td>{{ postcode.ward_code }}</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>{{ postcode.country }}</td>
+            </tr>
+            <tr>
+                <td>County Code</td>
+                <td>{{ postcode.county_code }}</td>
+            </tr>
+            <tr>
+                <td>Parish</td>
+                <td>{{ postcode.parish }}</td>
+            </tr>
+            <tr>
+                <td>National Park</td>
+                <td>{{ postcode.national_park }}</td>
+            </tr>
+            <tr>
+                <td>Population</td>
+                <td>{{ postcode.population }}</td>
+            </tr>
+            <tr>
+                <td>Households</td>
+                <td>{{ postcode.households }}</td>
+            </tr>
+            <tr>
+                <td>Built-up Area</td>
+                <td>{{ postcode.built_up_area }}</td>
+            </tr>
+            <tr>
+                <td>Rural Urban</td>
+                <td>{{ postcode.rural_urban }}</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>{{ postcode.region }}</td>
+            </tr>
+            <tr>
+                <td>Altitude</td>
+                <td>{{ postcode.altitude }}</td>
+            </tr>
+            <tr>
+                <td>London Zone</td>
+                <td>{{ postcode.london_zone }}</td>
+            </tr>
+            <tr>
+                <td>Local Authority</td>
+                <td>{{ postcode.local_authority }}</td>
+            </tr>
+            <tr>
+                <td>Census Output Area</td>
+                <td>{{ postcode.census_output_area }}</td>
+            </tr>
+            <tr>
+                <td>Index of Multiple Deprivation</td>
+                <td>{{ postcode.index_of_multiple_deprivation }}</td>
+            </tr>
+            <tr>
+                <td>Last Updated</td>
+                <td>{{ postcode.last_updated }}</td>
+            </tr>
+            <tr>
+                <td>Nearest Station</td>
+                <td>{{ postcode.nearest_station }}</td>
+            </tr>
+            <tr>
+                <td>Distance to Station</td>
+                <td>{{ postcode.distance_to_station }}</td>
+            </tr>
+            <tr>
+                <td>Postcode Area</td>
+                <td>{{ postcode.postcode_area }}</td>
+            </tr>
+            <tr>
+                <td>Postcode District</td>
+                <td>{{ postcode.postcode_district }}</td>
+            </tr>
+            <tr>
+                <td>Police Force</td>
+                <td>{{ postcode.police_force }}</td>
+            </tr>
+            <tr>
+                <td>Water Company</td>
+                <td>{{ postcode.water_company }}</td>
+            </tr>
+            <tr>
+                <td>Average Income</td>
+                <td>{{ postcode.average_income }}</td>
+            </tr>
+            <tr>
+                <td>Sewage Company</td>
+                <td>{{ postcode.sewage_company }}</td>
+            </tr>
+            <tr>
+                <td>Travel to Work Area</td>
+                <td>{{ postcode.travel_to_work_area }}</td>
+            </tr>
+            <tr>
+                <td>Distance to Sea</td>
+                <td>{{ postcode.distance_to_sea }}</td>
+            </tr>
+            <tr>
+                <td>Constituency Name 2024</td>
+                <td>{{ postcode.constituency_name_2024 }}</td>
+            </tr>
+            <tr>
+                <td>Property Type</td>
+                <td>{{ postcode.property_type }}</td>
+            </tr>
+            <tr>
+                <td>Roads</td>
+                <td>{{ postcode.roads }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+
+
+

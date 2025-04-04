@@ -1,3 +1,45 @@
 from django.db import models
 
-# Create your models here.
+class Postcode(models.Model):
+
+    postcode = models.CharField(max_length=10)
+    latitude = models.FloatField(blank=True)
+    longitude = models.FloatField(blank=True)
+    easting = models.IntegerField(blank=True)
+    northing = models.IntegerField(blank=True)
+    county = models.CharField(max_length=100, null=True, blank=True)
+    district = models.CharField(max_length=100, null=True, blank=True)
+    ward = models.CharField(max_length=100, null=True, blank=True)
+    district_code = models.CharField(max_length=10, null=True, blank=True)
+    ward_code = models.CharField(max_length=10, null=True, blank=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
+    county_code = models.CharField(max_length=10, null=True, blank=True)
+    parish = models.CharField(max_length=100, null=True, blank=True)
+    national_park = models.CharField(max_length=100, null=True, blank=True)
+    population = models.IntegerField(null=True, blank=True)
+    households = models.IntegerField(null=True, blank=True)
+    built_up_area = models.CharField(max_length=100, null=True, blank=True)
+    rural_urban = models.CharField(max_length=50, null=True, blank=True)
+    region = models.CharField(max_length=100, null=True, blank=True)
+    altitude = models.IntegerField(null=True, blank=True)
+    london_zone = models.IntegerField(null=True, blank=True)
+    local_authority = models.CharField(max_length=100, null=True, blank=True)
+    census_output_area = models.CharField(max_length=20, null=True, blank=True)
+    index_of_multiple_deprivation = models.IntegerField(null=True, blank=True)
+    last_updated = models.DateField(null=True, blank=True)
+    nearest_station = models.CharField(max_length=100, null=True, blank=True)
+    distance_to_station = models.FloatField(null=True, blank=True)
+    postcode_area = models.CharField(max_length=10, null=True, blank=True)
+    postcode_district = models.CharField(max_length=10, null=True, blank=True)
+    police_force = models.CharField(max_length=100, null=True, blank=True)
+    water_company = models.CharField(max_length=100, null=True, blank=True)
+    average_income = models.FloatField(null=True, blank=True)
+    sewage_company = models.CharField(max_length=100, null=True, blank=True)
+    travel_to_work_area = models.CharField(max_length=100, null=True, blank=True)
+    distance_to_sea = models.FloatField(null=True, blank=True)
+    constituency_name_2024 = models.CharField(max_length=100, null=True, blank=True)
+    property_type = models.CharField(max_length=50, null=True, blank=True)
+    roads = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.postcode

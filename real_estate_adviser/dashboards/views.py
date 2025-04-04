@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 
+from .models import Postcode
 from .forms import SearchForm
 from .global_vars import *
 
@@ -36,11 +37,21 @@ def register(request):
     return render(request, 'register.html', {'form': form})
 
 def search_results(request):
+
     query = request.GET.get('search_str')
+    query_nospace = query.replace(" ", "")
+
     results = []
     if query:
-        results = []
+        results = Postcode.objects.filter(
+            Q(postcode__icontains=query) | Q(postcode__icontains=query_nospace)
+        )
+
     return render(request, 'search_results.html', {'query': query, 'results': results})
+
+def postcode_details(request, postcode):
+    postcode = get_object_or_404(Postcode, postcode=postcode)
+    return render(request, 'postcode_details.html', {'postcode': postcode})
 
 @login_required(login_url='/login/')
 def user_account(request):
