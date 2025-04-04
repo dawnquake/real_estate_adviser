@@ -1,3 +1,4 @@
+sparqlwrapper
 django
 plotly
 pandas

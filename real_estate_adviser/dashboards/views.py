@@ -9,9 +9,10 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 
+import copy
 from .models import Postcode
 from .forms import SearchForm
-from .global_vars import *
+from .dashboards_vars import *
 
 def index(request):
     return render(request, 'index.html')
@@ -49,9 +50,17 @@ def search_results(request):
 
     return render(request, 'search_results.html', {'query': query, 'results': results})
 
-def postcode_details(request, postcode):
-    postcode = get_object_or_404(Postcode, postcode=postcode)
-    return render(request, 'postcode_details.html', {'postcode': postcode})
+def postcode_details(request, postcode_str):
+
+    postcode = get_object_or_404(Postcode, postcode=postcode_str)
+    postcode_district = postcode.postcode_district
+    postcode_unit = postcode_str.removeprefix(postcode_district)
+    postcode_with_space = "{} {}".format(postcode_district, postcode_unit)
+
+    query_postcode_hmlc_transactions_result = query_postcode_hmlc_transactions(postcode_with_space)
+    
+    return render(request, 'postcode_details.html', {'postcode': postcode,
+                                                     'query_postcode_hmlc_transactions_result': query_postcode_hmlc_transactions_result})
 
 @login_required(login_url='/login/')
 def user_account(request):

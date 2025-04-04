@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4"> {{postcode.postcode}} </h2>
+    <h2 class="text-center mb-4"> {{postcode.postcode}} Basic Details </h2>
     <table class="table table-bordered table-striped">
         <thead class="table-dark text-center">
             <tr>
@@ -166,6 +166,35 @@
                 <td>Roads</td>
                 <td>{{ postcode.roads }}</td>
             </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"> {{postcode.postcode}} Transaction History </h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>PAON</th>
+                <th>Street</th>
+                <th>Town</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through JSON data -->
+            {% for item in query_postcode_hmlc_transactions_result %}
+            <tr>
+                <td>{{ item.paon.value }}</td>
+                <td>{{ item.street.value }}</td>
+                <td>{{ item.town.value }}</td>
+                <td>{{ item.amount.value }}</td>
+                <td>{{ item.date.value }}</td>
+                <td>{{ item.category.value }}</td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>
